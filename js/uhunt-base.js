@@ -810,8 +810,8 @@ s(d)).toLowerCase()},
     template:
       '<table cellpadding="0" cellspacing="0">\
         <tr height="{{height}}">\
-          <td width="{{ (Math.floor(percent / 10) / 10) * width}}" style="" bgcolor="{{color}}"></td>\
-          <td style="border: 1px solid {{color}}"></td>\
+          <td style="width:{{ (Math.floor(percent / 10) / 10) * width}}px" bgcolor="{{color}}"></td>\
+          <td style="width:{{ (1 - (Math.floor(percent / 10) / 10)) * width}}px; border: 1px solid {{color}}"></td>\
         </tr>\
       </table>',
     link: function (scope, element, attrs) { scope.Math = Math; },
