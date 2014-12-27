@@ -43,12 +43,18 @@
             $rootScope.uhunt_user = uhunt_config.user;
             $rootScope.$watch('uhunt_user.uid', fetch);
 
-            $rootScope.$watch('username_input', function () {
+            $rootScope.sumbit_username = function() {
                 if (!$rootScope.username_input) return;
-                uhunt_rpc.uname2uid($rootScope.username_input, function (uid) {
-                    if (uid) $location.path('/id/' + uid);
+                $.get('http://uhunt.felix-halim.net' + '/api/uname2uid/' + $rootScope.username_input, function (data) {
+                    if (data != "0") {
+                        $rootScope.uhunt_user.uid = data;
+                        $location.path('/id/' + data);
+                    }
+                    else {
+                        alert("Can't find user.");
+                    }
                 });
-            });
+            }
 
             // Set the default statistics to be the author of uHunt >:).
             if (!uhunt_util.parse_uid_from_path($location.path())) {
@@ -71,10 +77,13 @@
 
             To submit your solution, use <a target="_blank" href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25&page=submit_problem">UVa Quick Submit</a>.
         </p>
-        <p style="margin:0">
-            Your UVa username:
-            <input placeholder="UVa username" ng-model="username_input" value="" size="13">
-        </p>
+        <form ng-submit="sumbit_username()">
+            <p style="margin:0">
+                Your UVa username:
+                <input ng-model="username_input" placeholder="UVa username" value="" size="13"/>
+                <button type="submit">View</button>
+            </p>
+        </form>
         <form ng-submit="problem_search.show=true; problem_search.search(2,1)">
             <p>
                 Search Problem Number:
