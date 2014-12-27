@@ -47,7 +47,6 @@
                 if (!$rootScope.username_input) return;
                 $.get('http://uhunt.felix-halim.net' + '/api/uname2uid/' + $rootScope.username_input, function (data) {
                     if (data != "0") {
-                        $rootScope.uhunt_user.uid = data;
                         $location.path('/id/' + data);
                     }
                     else {
