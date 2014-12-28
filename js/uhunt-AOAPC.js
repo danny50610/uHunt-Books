@@ -81,61 +81,61 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
 ])
 
 .value('AOAPC_2ed', [
-  {title:'Ch03 Arrays and Strings', arr:
+  {title:'Arrays and Strings', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch04 Functions and Recursion', arr:
+  {title:'Functions and Recursion', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch05 C++ and STL', arr:
+  {title:'C++ and STL', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch06 Data Structures', arr:
+  {title:'Data Structures', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch07 Brute Force', arr:
+  {title:'Brute Force', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch08 Algorithm Design', arr:
+  {title:'Algorithm Design', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch09 Dynamic Programming', arr:
+  {title:'Dynamic Programming', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch10 Maths', arr:
+  {title:'Maths', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch11 Graph Theory', arr:
+  {title:'Graph Theory', arr:
   [{title:'', arr:[
     ['']
    ]}
   ]},
 
-  {title:'Ch12 Advanced Topics', arr:
+  {title:'Advanced Topics', arr:
   [{title:'', arr:[
     ['']
    ]}
