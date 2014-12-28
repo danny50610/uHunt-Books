@@ -29,7 +29,7 @@
         </th>
       </tr>
       <tr height="22" bgcolor="#EEEEEE">
-        <td nowrap style="padding:0 5px 0 5px; border:0px; width:77.4%;">Book Chapters</td>
+        <td nowrap style="padding:0 5px 0 5px; border:0px; width:77.5%;">Book Chapters</td>
         <td nowrap style="padding:0 5px 0 5px; border:0px;">ALL</td>
         <!--a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render('Starred')">Starred</a> |
         <a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render(\'Compact\')">Compact</a> | >
@@ -38,7 +38,7 @@
     </thead>
     <tbody class="selectable-table">
       <tr height="22" ng-repeat="c in chapters" ng-class="{'cpbook-chapter-selected': $index==chapter}">
-        <td nowrap style="padding:0 5px 0 5px; font-size:12px; border:0px; cursor:pointer; width:289px;" ng-click="set_chapter($index)">{{$index + 1}}. {{c.title}}</td>
+        <td nowrap style="padding:0 5px 0 5px; font-size:12px; border:0px; cursor:pointer; width:77.5%; white-space:pre-line;" ng-click="set_chapter($index)">{{$index + 1}}. {{c.title}}</td>
         <td nowrap width="85" style="padding:0 5px 0 5px; cursor:pointer" ng-click="set_chapter($index, 'Everything')" ng-class="{
           'cpbook-blue-border': is_selected_and('Everything', $index),
           'cpbook-white-border': not_is_selected_and('Everything', $index)
