@@ -215,7 +215,7 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
     link: function (scope, element, attrs) {
       console.time('AOAPCCtrl');
       var AOAPC_chapters = [ AOAPC_1ed, AOAPC_2ed, cpbook_3ed ];
-      var nth = ['1st', '2nd', 'Training Guide'];
+      var nth = ["1st Edition", "2nd Edition", "Training Guide"];
       var color = ['blue', 'brown', 'green'];
       var img = ['images/cp.jpg', 'images/cp2-small.png', 'images/cp3.png'];
       var link = [
