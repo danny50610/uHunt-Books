@@ -175,6 +175,55 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
   ]},
 ])
 
+.value('AOAPC_TrainingGuide', [
+  {title:'Algorithm Design', arr:
+  [{title:'General Problem Solving Techniques', arr:[
+    ['Examples',11292,11729,11300,1388,10881,1030,11464,1352,11210,11384,10795,12124,12097,11520,1267,1335],
+    ['Exercises: Beginner'],
+    ['Exercises: Intermediate'],
+    ['Exercises: Advanced']
+   ]},
+
+   {title:'Designing Efficient Algorithms', arr:[
+    ['']
+   ]},
+
+   {title:'Dynamic Programming', arr:[
+    ['']
+   ]}
+  ]},
+  
+ {title:'Mathematics', arr:
+  [{title:'', arr:[
+    ['']
+   ]}
+  ]},
+  
+  {title:'Data Structures', arr:
+  [{title:'', arr:[
+    ['']
+   ]}
+  ]},
+  
+  {title:'Geometry', arr:
+  [{title:'', arr:[
+    ['']
+   ]}
+  ]},
+  
+  {title:'Graph Theory', arr:
+  [{title:'', arr:[
+    ['']
+   ]}
+  ]},
+  
+  {title:'Selected Topics', arr:
+  [{title:'', arr:[
+    ['']
+   ]}
+  ]}
+])
+
 .factory('AOAPC_parse_problems', function () {
   return function (chapters) {
     var problems = [];
@@ -196,7 +245,7 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
 
 .factory('AOAPC_1ed_numbers', function (AOAPC_1ed, AOAPC_parse_problems) { return AOAPC_parse_problems(AOAPC_1ed); })
 .factory('AOAPC_2ed_numbers', function (AOAPC_2ed, AOAPC_parse_problems) { return AOAPC_parse_problems(AOAPC_2ed); })
-//.factory('cpbook3_numbers', function (cpbook_3ed, AOAPC_parse_problems) { return AOAPC_parse_problems(cpbook_3ed); })
+.factory('AOAPC_TrainingGuide_numbers', function (AOAPC_TrainingGuide, AOAPC_parse_problems) { return AOAPC_parse_problems(AOAPC_TrainingGuide); })
 
 .factory('AOAPC_db', function (create_uhunt_db) {
   return create_uhunt_db('aoapc', {
@@ -206,7 +255,7 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
   });
 })
 
-.directive('uhuntAoapc', function (uhunt, uhunt_util, AOAPC_db, uhunt_problems, AOAPC_1ed, AOAPC_2ed, cpbook_3ed) {
+.directive('uhuntAoapc', function (uhunt, uhunt_util, AOAPC_db, uhunt_problems, AOAPC_1ed, AOAPC_2ed, AOAPC_TrainingGuide) {
   return {
     scope: {},
     replace: true,
@@ -214,7 +263,7 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
     templateUrl: 'partials/AOAPC.html',
     link: function (scope, element, attrs) {
       console.time('AOAPCCtrl');
-      var AOAPC_chapters = [ AOAPC_1ed, AOAPC_2ed, cpbook_3ed ];
+      var AOAPC_chapters = [ AOAPC_1ed, AOAPC_2ed, AOAPC_TrainingGuide ];
       var nth = ["1st Edition", "2nd Edition", "Training Guide"];
       var color = ['blue', 'brown', 'green'];
       var img = ['images/cp.jpg', 'images/cp2-small.png', 'images/cp3.png'];
@@ -269,7 +318,6 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
           for (var j = 0; j < sc.arr.length; j++) {
             var ssc = sc.arr[j], ss = [], sub_solved = 0, sub_total = 0; nhead++;
             for (var k = 1; k < ssc.length; k++) {
-              if (scope.show_chapter_type == 'Starred' && ssc[k] > 0) continue;
               var p = uhunt_problems.num(Math.abs(ssc[k]));
               if (!p) continue;
               var st = uhunt.user.stats(p.pid);
@@ -324,7 +372,6 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
           for (var j=0; j<sc.arr.length; j++){
             var ssc = sc.arr[j];
             for (var k=1; k<ssc.length; k++){
-              if (show == 'Starred' && ssc[k] > 0) continue;
               var p = uhunt_problems.num(Math.abs(ssc[k]));
               if (!p) continue;
               if (uhunt.user.stats(p.pid).ac) solved++;

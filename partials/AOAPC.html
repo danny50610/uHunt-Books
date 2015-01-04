@@ -20,7 +20,7 @@
     <thead>
       <tr class="tablebar cpbook-ed{{edition+1}}" style="height:30px">
       <!-- // #97683E -->
-        <th style="border:0; color:white" colspan="{{edition == 2 ? 3 : 2}}">{{nth_ed}}
+        <th style="border:0; color:white" colspan="2">{{nth_ed}}
           <span style="font-weight:normal">(switch to: 
           <a ng-click="switch_edition(0)" style="font-weight:bold; color:{{color1}}; cursor:pointer">1st</a>,
           <a ng-click="switch_edition(1)" style="font-weight:bold; color:{{color2}}; cursor:pointer">2nd</a>,
@@ -31,9 +31,7 @@
       <tr height="22" bgcolor="#EEEEEE">
         <td nowrap style="padding:0 5px 0 5px; border:0px; width:77.5%;">Book Chapters</td>
         <td nowrap style="padding:0 5px 0 5px; border:0px;" ng-show="edition == 0">Exercises</td>
-        <td nowrap style="padding:0 5px 0 5px; border:0px;" ng-show="edition == 1">ALL</td>
-        <td nowrap style="padding:0 5px 0 5px; border:0px;" ng-show="edition == 2">Examples</td>
-        <td nowrap style="padding:0 5px 0 5px; border:0px;" ng-show="edition == 2">Exercises</td>
+        <td nowrap style="padding:0 5px 0 5px; border:0px;" ng-show="edition != 0">ALL</td>
         <!--a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render('Starred')">Starred</a> |
         <a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render(\'Compact\')">Compact</a> | >
         <a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render('Everything')">Everything</a-->
