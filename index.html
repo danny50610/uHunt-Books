@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>uHunt-Books</title>
     <link rel="stylesheet" href="uhunt.css" />
-    <link rel="shortcut icon" href="images/uva-rounded.png" />
+    <!--<link rel="shortcut icon" href="images/uva-rounded.png" />-->
     <script src="js/angular.js"></script>
     <script src="js/uhunt-base.js"></script>
     <script src="js/uhunt-problem-search.js"></script>
@@ -59,7 +59,7 @@
 
             // Set the default statistics to be the author of uHunt >:).
             if (!uhunt_util.parse_uid_from_path($location.path())) {
-                $location.path('/id/339');
+                $location.path('/id/0');
             }
 
             $rootScope.$on('$locationChangeSuccess', function (event) {
