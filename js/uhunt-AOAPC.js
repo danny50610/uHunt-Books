@@ -275,7 +275,7 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
       scope.color1 = color[0];
       scope.color2 = color[1];
       scope.color3 = color[2];
-      scope.edition = Math.min(2, AOAPC_db.exists('edition') ? AOAPC_db.get('edition') : 2);
+      scope.edition = Math.min(2, AOAPC_db.exists('edition') ? AOAPC_db.get('edition') : 1);
       scope.chapter = AOAPC_db.get('chapter') || -1;
       scope.show_chapter_type = AOAPC_db.get('show') || 'Starred'; // Starred or Everything.
 
