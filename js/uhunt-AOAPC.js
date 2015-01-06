@@ -179,7 +179,7 @@ angular.module('uHunt.AOAPC', ['uHunt.base'])
   {title:'Algorithm Design', arr:
   [{title:'General Problem Solving Techniques', arr:[
     ['Examples',11292,11729,11300,1388,10881,1030,11464,1352,11210,11384,10795,12124,12097,11520,1267,1335],
-    ['Exercises: Beginner'],
+    ['Exercises: Beginner',11636,11039,1339,1368,10970,10340,10382,1346,1508,1509,10012,10020,10026,10317,10318,10670,1523,1555,1533,110,120,254,311,434,669,757,769,812,140,165,225,269,387,471,524,585,654,656,687,817,818],
     ['Exercises: Intermediate'],
     ['Exercises: Advanced']
    ]},
