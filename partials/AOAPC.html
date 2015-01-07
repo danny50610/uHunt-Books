@@ -30,8 +30,7 @@
       </tr>
       <tr height="22" bgcolor="#EEEEEE">
         <td nowrap style="padding:0 5px 0 5px; border:0px; width:77.5%;">Book Chapters</td>
-        <td nowrap style="padding:0 5px 0 5px; border:0px;" ng-show="edition == 0">Exercises</td>
-        <td nowrap style="padding:0 5px 0 5px; border:0px;" ng-show="edition != 0">ALL</td>
+        <td nowrap style="padding:0 5px 0 5px; border:0px;">{{edition == 0 ? "Exercises" : "ALL"}}</td>
         <!--a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render('Starred')">Starred</a> |
         <a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render(\'Compact\')">Compact</a> | >
         <a class="cp-show" style="text-decoration:none" href="javascript:uhunt.cpbook.render('Everything')">Everything</a-->
