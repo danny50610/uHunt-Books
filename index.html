@@ -14,6 +14,7 @@
     <script src="js/uhunt-AOAPC.js"></script>
     <script src="js/uhunt-ranklist.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/i18next-1.7.7.min.js"></script>
     <script>
         angular.module('uHunt', [
           'uHunt.base',
@@ -69,11 +70,31 @@
             return uhunt_config;
         })
     </script>
+
+    <script>
+        //設定 i18next
+        var option = {
+            getAsync: false,
+            fallbackLng: 'en',
+			ns: { 
+				namespaces: ['index'], 
+				defaultNs: 'index'
+			},
+            fallbackToDefaultNS: true,
+            debug: true
+        }; 
+
+        $.i18n.init(option, function(t) { });
+
+        $(document).ready(function() {
+            $(document).i18n();
+        });
+    </script>
 </head>
 <body>
     <div style="margin:0 auto; width:970px">
         <h1>uHunt-Books</h1>
-        <h2>!!!Work In Process!!!</h2>
+        <h2 data-i18n="WIP">!!!Work In Process!!!</h2>
         <p>
             uHunt is designed for users to effectively solve problems at <a target="_blank" href="http://uva.onlinejudge.org/index.php">UVa online-judge</a>. It provides statistics to keep track of user progress, virtual contest for group training, web API to build more tools. Watch the <a target="_blank" href="https://github.com/felix-halim/uhunt-components">uHunt development at Github</a>.
 
