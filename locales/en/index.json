@@ -1,0 +1,29 @@
+﻿{
+    "WIP": "!!!Work In Process!!!",
+    "uhunt-Book-intro": [
+        "This is made by use <a target='_blank' href='https://github.com/felix-halim/uhunt-components'>uHunt Components</a>, ",
+        "I add ",
+        "<a target='_blank' href='https://code.google.com/p/aoapc-book/'>AOAPC</a>, ",
+        "<a target='_blank' href='http://cpe.cse.nsysu.edu.tw/'>CPE</a>(not yet)",
+        "problem sets, and remove some of the features that you can use them in <a target='_blank' href='http://uhunt.felix-halim.net/'>uhunt</a>.<br/>",
+        "Link：<br/>",
+        "<ul>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php'>UVa online-judge</a></li>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25&page=submit_problem'>UVa Quick Submit</a></li>",
+        "</ul>"  
+    ],
+    "FAQ-Title": "Frequently Asked Questions",
+    "FAQ-Q1": [ 
+        "Q: What are the meaning of the colors on some problem numbers?<br>",
+        "A: The problem number will will be colored",
+        "Red if it was last submitted less than <b style='color:#FF0000'>2 days</b> ago,",
+        "Green for less than <b style='color:#00AA00'>1 week</b> ago,",
+        "Blue for less than <b style='color:#0000FF'>1 month</b> ago,",
+        "Orange if the problem is <b style='color:orange'>not yet Accepted</b>,",
+        "otherwise, <b>Black</b>.",
+        "In the ChatBox and in the Live Submissions, some problem numbers will be",
+        "<u>underlined</u> if you have solved the problem.",
+        "The <b>bold problem numbers</b> in the statistics denotes that",
+        "the runtime of your submission is equal to the best runtime (rank 1 of that problem)."
+    ]
+}

@@ -1,0 +1,27 @@
+﻿{
+    "WIP": "!!!施工中!!!",
+    "uhunt-Book-intro": [
+        "這是使用<a target='_blank' href='https://github.com/felix-halim/uhunt-components'>uHunt Components</a>製作而成的網站，",
+        "我新增",
+        "<a target='_blank' href='https://code.google.com/p/aoapc-book/'>AOAPC</a>、",
+        "<a target='_blank' href='http://cpe.cse.nsysu.edu.tw/'>CPE</a>(未製作)",
+        "問題集，並移除部分功能，你可以在<a target='_blank' href='http://uhunt.felix-halim.net/'>uhunt</a>使用他們。<br/>",
+        "網站連結：<br/>",
+        "<ul>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php'>UVa online-judge</a></li>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25&page=submit_problem'>UVa Quick Submit</a></li>",
+        "</ul>" 
+    ],
+    "FAQ-Title": "常見問題",
+    "FAQ-Q1": [
+        "Q: 題目編號的顏色代表甚麼意思？<br>",
+        "A: ",
+        "紅色代表<b style='color:#FF0000'>兩天</b>內有提交(submit)、",
+        "綠色代表<b style='color:#00AA00'>一週</b>內、",
+        "藍色代表<b style='color:#0000FF'>一個月</b>內、",
+        "橘色代表<b style='color:orange'>未AC(not yet Accepted)</b>，",
+        "其他都是黑色。<br/>",
+        "在 Live Submissions 裡的題目編號，有標<u>底線</u>代表此題已AC。<br/>",
+        "在 statistics denotes 裡的題目編號，有標<b>粗體</b>代表你此題的執行時間等於最快的執行時間。"
+    ]
+}

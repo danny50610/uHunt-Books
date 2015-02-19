@@ -14,6 +14,7 @@
     <script src="js/uhunt-AOAPC.js"></script>
     <script src="js/uhunt-ranklist.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/i18next-1.7.7.min.js"></script>
     <script>
         angular.module('uHunt', [
           'uHunt.base',
@@ -69,16 +70,50 @@
             return uhunt_config;
         })
     </script>
+
+    <script>
+        //設定 i18next
+        var option = {
+            getAsync: false, //同步載入語系檔
+            fallbackLng: 'en',
+			ns: { 
+				namespaces: ['index'], 
+				defaultNs: 'index'
+			},
+            fallbackToDefaultNS: true,
+            debug: true
+        }; 
+
+        var languageList = [
+            ['English', 'en'],
+            ['繁體中文', 'zh-TW']
+        ];
+
+        $.i18n.init(option, function(t) { });
+
+        $(document).ready(function() {
+            $(document).i18n();
+
+            //建立語言清單
+            var host_path = window.location.pathname;
+            for (i = 0; i < languageList.length; i++) {
+                $('#languageList').append(
+                    '<a href="' + host_path + "?setLng=" + languageList[i][1] + window.location.hash + '">' + languageList[i][0] + '</a>' + ' | '
+                );
+            }
+
+        });
+    </script>
 </head>
 <body>
-    <div style="margin:0 auto; width:970px">
+    <div style="margin:0 auto 48pt auto; width:970px">
         <h1>uHunt-Books</h1>
-        <h2>!!!Work In Process!!!</h2>
-        <p>
-            uHunt is designed for users to effectively solve problems at <a target="_blank" href="http://uva.onlinejudge.org/index.php">UVa online-judge</a>. It provides statistics to keep track of user progress, virtual contest for group training, web API to build more tools. Watch the <a target="_blank" href="https://github.com/felix-halim/uhunt-components">uHunt development at Github</a>.
-
-            To submit your solution, use <a target="_blank" href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25&page=submit_problem">UVa Quick Submit</a>.
+        <h2 data-i18n="WIP">!!!Work In Process!!!</h2>
+        <p id="languageList" style="text-align:right">
+            <!--清單開頭的 | -->
+             | 
         </p>
+        <p data-i18n="[html]uhunt-Book-intro"/>
         <form ng-submit="sumbit_username()">
             <p style="margin:0">
                 Your UVa username:
@@ -106,21 +141,9 @@
         <div uhunt-ranklist></div>
         <hr style="clear:both">
         <div>
-            <h2 align="center">Frequently Asked Questions</h2>
+            <h2 data-i18n="FAQ-Title" align="center">Frequently Asked Questions</h2>
             <ul>
-                <li>
-                    Q: What are the meaning of the colors on some problem numbers?<br>
-                    A: The problem number will will be colored
-                    Red if it was last submitted less than <b style="color:#FF0000">2 days</b> ago,
-                    Green for less than <b style="color:#00AA00">1 week</b> ago,
-                    Blue for less than <b style="color:#0000FF">1 month</b> ago,
-                    Orange if the problem is <b style="color:orange">not yet Accepted</b>,
-                    otherwise, <b>Black</b>.
-                    In the ChatBox and in the Live Submissions, some problem numbers will be
-                    <u>underlined</u> if you have solved the problem.
-                    The <b>bold problem numbers</b> in the statistics denotes that
-                    the runtime of your submission is equal to the best runtime (rank 1 of that problem).
-                </li>
+                <li data-i18n="[html]FAQ-Q1"></li>
             </ul>
         </div>
     </div>
