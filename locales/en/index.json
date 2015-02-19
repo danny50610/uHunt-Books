@@ -1,5 +1,17 @@
 ﻿{
     "WIP": "!!!Work In Process!!!",
+    "uhunt-Book-intro": [
+        "This is made by use <a target='_blank' href='https://github.com/felix-halim/uhunt-components'>uHunt Components</a>, ",
+        "I add ",
+        "<a target='_blank' href='https://code.google.com/p/aoapc-book/'>AOAPC</a>, ",
+        "<a target='_blank' href='http://cpe.cse.nsysu.edu.tw/'>CPE</a>(not yet)",
+        "problem sets, and remove some of the features that you can use them in <a target='_blank' href='http://uhunt.felix-halim.net/'>uhunt</a>.<br/>",
+        "Link：<br/>",
+        "<ul>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php'>UVa online-judge</a></li>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25&page=submit_problem'>UVa Quick Submit</a></li>",
+        "</ul>"  
+    ],
     "FAQ-Title": "Frequently Asked Questions",
     "FAQ-Q1": [ 
         "Q: What are the meaning of the colors on some problem numbers?<br>",

@@ -1,5 +1,17 @@
 ﻿{
     "WIP": "!!!施工中!!!",
+    "uhunt-Book-intro": [
+        "這是使用<a target='_blank' href='https://github.com/felix-halim/uhunt-components'>uHunt Components</a>製作而成的網站，",
+        "我新增",
+        "<a target='_blank' href='https://code.google.com/p/aoapc-book/'>AOAPC</a>、",
+        "<a target='_blank' href='http://cpe.cse.nsysu.edu.tw/'>CPE</a>(未製作)",
+        "問題集，並移除部分功能，你可以在<a target='_blank' href='http://uhunt.felix-halim.net/'>uhunt</a>使用他們。<br/>",
+        "網站連結：<br/>",
+        "<ul>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php'>UVa online-judge</a></li>",
+        "<li><a target='_blank' href='http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25&page=submit_problem'>UVa Quick Submit</a></li>",
+        "</ul>" 
+    ],
     "FAQ-Title": "常見問題",
     "FAQ-Q1": [
         "Q: 題目編號的顏色代表甚麼意思？<br>",
