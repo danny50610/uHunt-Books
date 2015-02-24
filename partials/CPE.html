@@ -1,0 +1,61 @@
+﻿<div>
+  <h2 align="center">Collegiate Programming Examination</h2>
+
+  <table id="CPE-chapters" border="1" style="float:right; width:373px; margin-left:15px;" cellpadding="0" cellspacing="0">
+    <thead>
+      <tr height="22" bgcolor="#EEEEEE">
+        <td nowrap style="padding:0 5px 0 5px; border:0px; width:77.5%;">Year</td>
+        <td nowrap style="padding:0 5px 0 5px; border:0px;">ALL</td>
+      </tr>
+    </thead>
+      
+    <tbody class="selectable-table">
+      <tr height="22" ng-repeat="c in chapters" ng-class="{'cpbook-chapter-selected': $index==chapter}">
+        <td nowrap style="padding:0 5px 0 5px; font-size:12px; border:0px; cursor:pointer; width:77.5%; white-space:pre-line;" ng-click="set_chapter($index)">{{$index + 1}}. {{c.title}}</td>
+        <td nowrap width="85" style="padding:0 5px 0 5px; cursor:pointer" ng-click="set_chapter($index, 'Everything')" ng-class="{
+          'cpbook-blue-border': is_selected_and('Everything', $index),
+          'cpbook-white-border': not_is_selected_and('Everything', $index)
+        }">
+          <table width="100%">
+            <tr>
+              <td><span uhunt-bar percent="{{percentage(c, 'Everything')}}" color="green" width="30" height="10"></span></td>
+              <td align="right">{{percentage(c, 'Everything')}}%</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br style="clear:both">
+  <br style="clear:both">
+
+  <div ng-show="chapter >= 0">
+    <div ng-repeat="s in sections" style="float:{{s.float}}">
+      <table width="475" class="cpbook-table" border="1" style="margin-bottom:15px;" cellspacing="0">
+        <thead>
+          <tr>
+            <th colspan="3" style="height:20px; border:0; color:white;" class="tablebar" ng-bind-html-unsafe="s.section_title"></th>
+          </tr>
+        </thead>
+        <tbody class="alt_colors" ng-repeat="sc in s.sections">
+          <tr>
+            <td colspan="3" style="font-weight:bold; font-size:11px" ng-bind-html-unsafe="sc.title"></td>
+          </tr>
+          <tr ng-repeat="ssc in sc.sections">
+            <td nowrap width="*" bgcolor="">
+              <span style="float:right; padding-right:5px" uhunt-discuss="{{ssc.p.num}}"></span>
+              &nbsp;<span uhunt-problem="{{ssc.p.pid}}"></span> -
+              <span uhunt-problem-title="{{ssc.p.pid}}" width="210"></span>
+            </td>
+            <td style="width:65px" align="right">
+              <span ng-show="{{ssc.starred}}">&#9733;&nbsp;</span>
+              Lev {{ssc.level}}&nbsp;
+            </td>
+            <td width="135" ng-bind-html-unsafe="ssc.status"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
