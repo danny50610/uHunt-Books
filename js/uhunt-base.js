@@ -602,7 +602,7 @@ s(d)).toLowerCase()},
 .directive('uhuntNameUname', function () {
   return {
     scope: { name:'@', uname:'@', uid:'@', width:'@' },
-    template: '<a class="ellipsis" style="margin-left:5px; width:{{width - 10}}px" target="_blank" href="/id/{{uid}}">{{name + " (" + uname + ")"}}</a>',
+    template: '<a class="ellipsis" style="margin-left:5px; width:{{width - 10}}px" target="_blank" href="#/id/{{uid}}">{{name + " (" + uname + ")"}}</a>',
   };
 })
 
