@@ -1,6 +1,33 @@
 ﻿angular.module('uHunt.CPE', ['uHunt.base'])
 
 .value('CPE_ExamList', [
+  {title:'1 STAR', arr:
+  [{title:'Misc', arr:[
+    ['',10041,10055,10035,100,10929,10101,10420
+  ]]},
+   {title:'Characters and Strings', arr:[
+    ['',10008,10222,11332,10252,490,272
+  ]]},
+   {title:'Math', arr:[
+    ['',12019,10038,10056,10170,10268,10783,10812,11349,11461,11063,10071
+  ]]},
+   {title:'The binary conversion', arr:[
+    ['',10093,948,10019,10931,11005
+  ]]},
+   {title:'Prime number, factor and multiple', arr:[
+    ['',10050,10193,10190,10235,10922,11417
+  ]]},
+   {title:'Geometry and coordinates', arr:[
+    ['',10908,10221,10642,10242
+  ]]},
+   {title:'Sort and Median', arr:[
+    ['',10057,10062,299,10226
+  ]]},
+   {title:'Simulation', arr:[
+    ['',10189,10409,10415,118,11150
+  ]]},
+  ]},
+  
   {title:'2013', arr:
   [{title:'2013/10/01', arr:[
     ['',10190,264,10018,612,151,11336,10309
